@@ -1,6 +1,7 @@
 <!-- src/lib/components/NoteForm.svelte -->
 <script>
     import { createEventDispatcher } from 'svelte';
+    import { fly } from 'svelte/transition';
     import Spinner from './Spinner.svelte';
 
     export let note = null;
@@ -37,12 +38,12 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit} class="space-y-6">
-    <h2 class="text-2xl font-bold mb-6">
+    <h2 class="text-2xl font-bold mb-6 gradient-text inline-block">
         {isEditing ? 'Edit Note' : 'Create New Note'}
     </h2>
 
     <div class="space-y-4">
-        <div>
+        <div in:fly={{y: 10, duration: 200, delay: 100}}>
             <label for="title" class="block text-sm font-medium mb-1">
                 Title
             </label>
@@ -51,12 +52,12 @@
                 id="title"
                 bind:value={formData.title}
                 placeholder="Enter note title"
-                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-sky-500 dark:focus:border-sky-400"
+                class="form-input"
                 required
             />
         </div>
 
-        <div>
+        <div in:fly={{y: 10, duration: 200, delay: 200}}>
             <label for="content" class="block text-sm font-medium mb-1">
                 Content
             </label>
@@ -65,24 +66,24 @@
                 bind:value={formData.content}
                 placeholder="Enter note content"
                 rows="6"
-                class="w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-sky-500 dark:focus:border-sky-400"
+                class="form-input"
                 required
             ></textarea>
         </div>
     </div>
 
-    <div class="flex justify-end gap-3 pt-4">
+    <div class="flex justify-end gap-3 pt-4" in:fly={{y: 10, duration: 200, delay: 300}}>
         <button
             type="button"
             on:click={handleCancel}
-            class="px-4 py-2 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            class="btn-secondary"
         >
             Cancel
         </button>
         <button
             type="submit"
             disabled={isSubmitting}
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-sky-600 rounded-lg hover:bg-sky-700 disabled:bg-sky-400 disabled:cursor-not-allowed transition-colors"
+            class="btn-primary"
         >
             {#if isSubmitting}
                 <Spinner />
