@@ -13,7 +13,7 @@ To get the application running on your local machine, please follow these steps.
 **1. Clone the Repository**
 
 ```bash
-git clone [<your-repo-url>](https://github.com/StackOverflowed512/frontend_assign)
+git clone https://github.com/StackOverflowed512/frontend_assign
 cd <your-repo-folder>
 ```
 
