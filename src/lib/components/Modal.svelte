@@ -29,15 +29,15 @@
 {#if show}
     <div
         transition:fade={{ duration: 200 }}
-        class="fixed inset-0 z-40 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
         on:click|self={close}
         role="dialog"
         aria-modal="true"
         aria-label="Modal"
     >
         <div 
-            transition:scale={{duration: 200, easing: cubicOut, start: 0.95}}
-            class="relative w-full max-w-lg bg-white/95 dark:bg-gray-800/95 rounded-2xl shadow-2xl backdrop-blur-xl border border-slate-200/50 dark:border-gray-700/50 p-6"
+            transition:scale={{duration: 300, easing: cubicOut, start: 0.95}}
+            class="relative w-full max-w-lg glass rounded-2xl shadow-2xl shadow-sky-500/10 dark:shadow-sky-400/10 p-6 border border-white/20 dark:border-gray-700/20"
             role="document"
         >
             <slot />

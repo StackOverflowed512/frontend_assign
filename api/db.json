@@ -1,11 +1,6 @@
 {
   "notes": [
     {
-      "title": "Grocery List",
-      "content": "Milk, Bread,Curd, Cheese, and Apples.",
-      "id": 1
-    },
-    {
       "id": 3,
       "title": "Workout Plan",
       "content": "Monday: Chest & Triceps\nWednesday: Back & Biceps\nFriday: Legs & Shoulders",

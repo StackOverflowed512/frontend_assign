@@ -6,20 +6,33 @@
     --blur-amount: 12px;
 }
 
+/* Enhanced gradient background */
 body {
-    @apply bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-900 dark:to-gray-800 min-h-screen text-slate-800 dark:text-slate-200 transition-colors duration-300;
+    @apply bg-gradient-to-br from-sky-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-slate-900 dark:to-gray-900 min-h-screen text-slate-800 dark:text-slate-200 transition-colors duration-300;
     background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
 }
 
-/* Add smooth scrolling */
-html {
-    scroll-behavior: smooth;
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glass effect utilities */
+.glass {
+    @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg border border-white/20 dark:border-gray-700/20;
+}
+
+.glass-hover {
+    @apply hover:bg-white/90 dark:hover:bg-gray-800/90 transition-all duration-300;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,14 +40,26 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-slate-300 dark:bg-gray-600 rounded-full;
+    @apply bg-sky-400/50 dark:bg-sky-500/50 rounded-full hover:bg-sky-500/70 dark:hover:bg-sky-400/70 transition-colors;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-400 dark:bg-gray-500;
-}
-
-/* Improved focus styles */
+/* Enhanced focus styles */
 *:focus-visible {
-    @apply outline-none ring-2 ring-sky-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+    @apply outline-none ring-2 ring-sky-400 ring-offset-2 ring-offset-white/50 dark:ring-offset-gray-900/50;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Typography enhancements */
+.gradient-text {
+    @apply bg-gradient-to-r from-sky-500 to-purple-500 dark:from-sky-400 dark:to-purple-400 bg-clip-text text-transparent;
 }
