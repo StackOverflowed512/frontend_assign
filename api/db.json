@@ -2,7 +2,7 @@
   "notes": [
     {
       "id": 1,
-      "title": "Grocery List",
+      "title": "Grocery Lists",
       "content": "Milk, Bread, Cheese, and Apples.",
       "createdAt": "2024-07-21T10:00:00.000Z"
     },
@@ -17,6 +17,12 @@
       "title": "Svelte Project Ideas",
       "content": "- A portfolio website\n- A recipe book app\n- A habit tracker",
       "createdAt": "2024-06-15T18:45:00.000Z"
+    },
+    {
+      "title": "note 1",
+      "content": "hello world\n",
+      "createdAt": "2025-06-16T14:04:41.019Z",
+      "id": 5
     }
   ]
 }

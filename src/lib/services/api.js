@@ -67,7 +67,7 @@ export async function getNotes() {
 
 /**
  * Create a new note
- * @param {{title: string, content: string}} note 
+ * @param {{title: string, content: string, createdAt: string}} note 
  * @returns {Promise<object>} Created note
  */
 export async function createNote(note) {
