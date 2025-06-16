@@ -1,10 +1,9 @@
 {
   "notes": [
     {
-      "id": 1,
-      "title": "Grocery Lists",
-      "content": "Milk, Bread, Cheese, and Apples.",
-      "createdAt": "2024-07-21T10:00:00.000Z"
+      "title": "Grocery List",
+      "content": "Milk, Bread,Curd, Cheese, and Apples.",
+      "id": 1
     },
     {
       "id": 3,
