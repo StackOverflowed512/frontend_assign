@@ -14,7 +14,6 @@ To get the application running on your local machine, please follow these steps.
 
 ```bash
 git clone https://github.com/StackOverflowed512/frontend_assign
-cd <your-repo-folder>
 ```
 
 **2. Install Dependencies**
